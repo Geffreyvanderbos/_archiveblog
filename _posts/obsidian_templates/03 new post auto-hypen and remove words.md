@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "<%* let postTitle = await tp.system.prompt("What is the post title?");-%><% postTitle %>"
-date:   <% tp.date.now("YYYY-MM-DD HH:MM:SS") %>
+date:   <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 <%* 
