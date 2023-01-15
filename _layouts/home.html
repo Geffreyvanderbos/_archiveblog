@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="introduction">
+  <img width="80" src="">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+  <div class="my-undertakings">
+    {{ content }}
+  </div>
+</div>
+<div class="articles-wrapper">
+  <span class="divider"></span>
+  {% for post in site.posts %}
+  <article>
+    <h1 class="article-feed--header">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+    <time class="article-published-time" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+    {{ post.content }}
+  </article>
+  {% endfor %}
+  </div>
+</div>
