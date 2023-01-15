@@ -2,7 +2,6 @@
 <footer>
 	<div class="content">
     {%- include h-card.html -%}
-    {%- include indieweb.html -%}
 		<ul class="social-links">
 			<li>
 				<a href="https://www.linkedin.com/in/gvanderbos/" title="Geffrey on LinkedIn">
@@ -18,6 +17,7 @@
 </footer>
 
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+{% webmentions_js %}
 <script>
   let darkModeState = false;
   

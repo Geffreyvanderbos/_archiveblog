@@ -10,6 +10,12 @@ plugins:
   - jekyll-feed
 permalink: /:title
 
+webmentions:
+  throttle_lookups:
+    last_week: daily
+    last_month: weekly
+    last_year: every 2 weeks
+    older: monthly
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
