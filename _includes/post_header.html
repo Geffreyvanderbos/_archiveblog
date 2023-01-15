@@ -1,11 +1,22 @@
-<header>
-  <div class="header-line">
-    <span class="header-line__backlink small-text">
-      <svg width="16" height="13" class="back-to-articles__icon" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" fill-rule="evenodd"><path d="M15.5 6.5H1M7 12 1 6.5 7 1"/></g>
-      </svg>
-      <a class="back-to-articles" href="{{ site.url }}">Back to all posts</a>
-    </span>
-    <button class="copylink small-text copy-link-button" data-clipboard-text="https://www.geffreyvanderbos.com{{ page.url }}">Click to copy link</button>
-  </div>
+<header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+        ~ 
+        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+          {{ mdate | date: date_format }}
+        </time>
+      {%- endif -%}
+      {%- if page.author -%}
+        • {% for author in page.author %}
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+            {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      {%- endif -%}</p>
+    </div>
 </header>

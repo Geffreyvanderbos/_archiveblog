@@ -33,6 +33,7 @@
   
   --fluid-screen: 100vw;
   --fluid-bp: calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16)));
+  --font-family: "Source Serif Pro", serif;
 }
 
 @media screen and (min-width: 1500px) {
@@ -139,7 +140,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--font-color);
-  font: 400 var(--fluid-0) / 1.6 'Inter', sans-serif;
+  font: 400 var(--fluid-0) / 1.6 var(--font-family);
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -177,7 +178,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
   margin: 0.5em 0;
 }
@@ -202,11 +203,14 @@ header {
   max-width: var(--max-container-width);
   padding-bottom: var(--fluid-5);
   padding-top: var(--fluid-5);
+}
+
+.page-header {
   padding-right: var(--fluid-2);
   padding-left: var(--fluid-2);
 }
 
-header .header-line {
+.header-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -215,7 +219,7 @@ header .header-line {
   border-bottom: 1px solid var(--font-color);
 }
 
-header .header-line__backlink {
+.header-line__backlink {
   padding: calc(var(--fluid-0) / 2);
   padding-left: 0;
 }
@@ -234,8 +238,8 @@ header a {
   background-image: none;
 }
 
-header .copy-link-button, article .read-more-button, .load-more {
-  font-family: "Inter", sans-serif;
+.copy-link-button, article .read-more-button, .load-more {
+  font-family: var(--font-family);
   color: var(--font-color);
   padding: calc(var(--fluid-0) / 2);
   border: 1px solid var(--font-color);
@@ -244,11 +248,11 @@ header .copy-link-button, article .read-more-button, .load-more {
   transition: background-color .065s ease-out;
 }
 
-header .copy-link-button:hover:not(.copy-successful), .load-more {
+.copy-link-button:hover:not(.copy-successful), .load-more {
   background-color: var(--button-hover);
 }
 
-header .copy-successful {
+.copy-successful {
   background-color: var(--background-pop-subtle);
 }
 
@@ -338,14 +342,14 @@ main {
   width: 100%;
 }
 
-article {
+.articles-wrapper article, .single-entry  {
   max-width: var(--max-article-width);
   margin-bottom: calc(var(--fluid-5)*5);
   margin-right: auto;
   margin-left: auto;
 }
 
-article > p, article ol, article ul {
+.articles-wrapper article > p, article ol, article ul {
     margin-top: calc(var(--fluid-0)*1.75);
     margin-bottom: calc(var(--fluid-0)*1.75);
 }
@@ -385,7 +389,7 @@ article> hr:last-child {
 }
 
 article table {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   display: table;
   width: 100%;
   border-collapse: collapse;
@@ -397,7 +401,7 @@ article table thead {
   text-align: left;
 }
 article table thead th {
-  font-weight: 500;
+  font-weight: 700;
   color: var(--muted-font-color);
 }
 
