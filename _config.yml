@@ -7,12 +7,5 @@ url: "https://geffreys.blog/" # the base hostname & protocol for your site, e.g.
 
 plugins:
   - jekyll-feed
-  - jekyll-webmention_io
+  
 permalink: /:title
-
-webmentions:
-  throttle_lookups:
-    last_week: daily
-    last_month: weekly
-    last_year: every 2 weeks
-    older: monthly
