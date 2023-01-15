@@ -1,5 +1,5 @@
 ---
-title: On this microblog, I share thoughts on personal knowledge management, product management, and the internet
+title: My notes on personal knowledge management, product management, and technology
 layout: home
 ---
 <ul class="links">
