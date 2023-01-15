@@ -22,7 +22,7 @@ title: Geffrey's Blog on Product Management and Personal Knowledge Management
 email: geffrey.bos@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A description for my blog.
-baseurl: "blog" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://geffreyvanderbos.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  geffreyvanderbos
 
