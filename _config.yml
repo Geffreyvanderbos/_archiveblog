@@ -29,7 +29,7 @@ github_username:  geffreyvanderbos
 # Build settings
 plugins:
   - jekyll-feed
-permalink: /blog/:title
+permalink: pretty
 
 # Exclude from processing.
 # The following items will not be processed, by default.
