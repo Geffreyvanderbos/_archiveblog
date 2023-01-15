@@ -1,7 +1,7 @@
 ---
-title: 'Good team management is setting goals'
+date: 2022-01-15
 layout: post
-date:   2022-01-15
+title: 'Good team management is setting goals'
 visible: 0
 ---
 

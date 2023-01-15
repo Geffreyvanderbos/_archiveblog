@@ -1,13 +1,14 @@
 ---
-title: 'Infuse daily decisions with customer input'
+date: 2022-01-15
 layout: post
-date:   2022-01-15
+title: 'Infuse daily decisions with customer input'
 visible: 0
 ---
 
 Teresa Torres' her Continues Discovery means adopting discovery activities in a structured and sustainable way. To enable us to continuously make product decisions with target customer input.
 
 The keyword is _infuse_. Letting your customers lead the development is a mistake. Here is why:
+
 - Every customer has their own preferences. You can't please everyone.
 - Your customers might not agree with your vision. They distract.
 - Users often don't know what is possible.

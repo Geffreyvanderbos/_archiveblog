@@ -1,18 +1,19 @@
 ---
-title: 'Crucial User Research'
+date: 2022-01-15
 layout: post
-date:   2022-01-15
+title: 'Crucial User Research'
 visible: 0
 ---
 
 Build products that fulfill the needs of your target audience.
 
-You'll have to discover: 
+You'll have to discover:
+
 - Who your customers are
 - What needs they have
 - How to provide the solutions that work
 
-The first two steps are what [Steve Blank](https://oku.club/book/the-four-steps-to-the-epiphany-by-steve-blank-9EK93) calls _Customer Development_. In Customer Development you define your assumptions, rewrite them in hypotheses, test them, and verify them with your target customer. 
+The first two steps are what [Steve Blank](https://oku.club/book/the-four-steps-to-the-epiphany-by-steve-blank-9EK93) calls _Customer Development_. In Customer Development you define your assumptions, rewrite them in hypotheses, test them, and verify them with your target customer.
 
 During the verification phase, assess your solutions with User Tests. Jeffrey Rubin and Dana Chisnell of the [Handbook of Usability Testing](https://oku.club/book/handbook-of-usability-testing-by-dana-chisnell-kGu09) coin three different tests: Exploratory-, Assessment-, and Validation User Tests
 

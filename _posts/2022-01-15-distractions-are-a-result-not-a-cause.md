@@ -1,7 +1,7 @@
 ---
-title: 'Distractions are a result, not a cause'
+date: 2022-01-15
 layout: post
-date:   2022-01-15
+title: 'Distractions are a result, not a cause'
 visible: 0
 ---
 

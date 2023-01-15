@@ -1,7 +1,7 @@
 ---
-title: 'Daily Notes: A way to keep track of information that is crucial to my role'
+date: 2022-01-15
 layout: post
-date:   2022-01-15
+title: 'Daily Notes: A way to keep track of information that is crucial to my role'
 visible: 0
 ---
 

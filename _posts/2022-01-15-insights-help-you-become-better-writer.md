@@ -1,7 +1,7 @@
 ---
-title: 'How these few insights help you become a better writer (and communicator)'
+date: 2022-01-15
 layout: post
-date:   2022-01-15
+title: 'How these few insights help you become a better writer (and communicator)'
 visible: 0
 ---
 
@@ -12,11 +12,12 @@ I now believe I have the tools to practice until perfect.
 In this summary of what I've learned, we'll cover motivation, writing leads, and using all the words you need, but no more.
 
  There are a few reasons why you'd want to write something. Your motivation could be:
+
  - Sharing your excitement about something with your reader.
  - Persuading others of something you believe is important.
  - You need to get something off your chest.
 
-**Combining a motivation with an objective helps structure your content before it's written.** An  objective could be to prove the status quo wrong, or making an overwhelming concept approachable.
+**Combining a motivation with an objective helps structure your content before it's written.** An objective could be to prove the status quo wrong, or making an overwhelming concept approachable.
 
 Once you have your pair, a way to continue is to write leads that keep your audience curious.
 
@@ -37,6 +38,7 @@ When content is not clear or too wordy, it is ignored. That makes redundancy the
 First, avoid all words that end in "-ly". Most adverbs are unnecessary.
 
 Second, stay away from qualifiers such as time words, attention getters, and emphasis words. Hit the search function of your editor and delete the following redundancies:
+
 - *Time of, Period of* (time words)
 - *A total of, Amount of* (quantity words)
 - *In order, In fact, In case* (attention getters)
@@ -44,7 +46,7 @@ Second, stay away from qualifiers such as time words, attention getters, and emp
 
 There are more: *A bit, A Little, Sort Of, Kind of, Rather, Quite, Very, Too, Pretty much, In a sense*. Hit backspace on them. They dilute your writing.
 
-Most adjectives are unnecessary, as well. We knew the lighthouse is tall before you mentioned it. 
+Most adjectives are unnecessary, as well. We knew the lighthouse is tall before you mentioned it.
 
 Rephrase every paragraph with the focus on succinctness. **Remove unnecessary detail and rewrite using simple wording.** A good writer doesn’t need to show off their vocabulary.
 
