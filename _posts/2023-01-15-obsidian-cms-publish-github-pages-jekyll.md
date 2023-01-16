@@ -19,8 +19,10 @@ Now, I …
 
 It works really well.
 
+<!---
 Below the template I use for posts. On creating a new note, it asks for the post title. It then renames the file with a Jekyll ready permalink.
 
+ 
 ```
 ---
 layout: post
@@ -59,3 +61,4 @@ function getStopWords() {
 
 <% tp.file.rename(tp.date.now() + "-" + permaLink) %>
 ```
+--->
