@@ -4,16 +4,24 @@
 }
 
 :root { 
-  --font-color: hsl(120, 3%, 15%);
+  /* --font-color: hsl(120, 3%, 15%);
   --muted-font-color: hsl(108, 3%, 55%);
   --background-color: hsl(111, 3%, 98%);
   --button-hover: hsl(111, 3%, 90%);
   --background-pop: hsl(111, 63%, 24%);
   --background-pop-subtle: hsl(111, 10%, 74%);
-  --link-underline-color: hsl(111, 3%, 15%);
+  --link-underline-color: hsl(111, 3%, 15%); */
+  --font-color: hsl(150, 4%, 80%);
+  --accented-font-color: hsl(150, 4%, 94%);
+  --muted-font-color: hsl(150, 4%, 50%);
+  --background-color: #0A0A0A;
+  --button-hover: hsl(111, 1%, 25%);
+  --background-pop: hsl(111, 18%, 74%);
+  --background-pop-subtle: hsl(111, 10%, 54%);
+  --link-underline-color: hsl(111, 15%, 95%);
 }
 
-.dark-mode body { 
+/* .dark-mode body { 
   --font-color: hsl(111, 15%, 95%);
   --muted-font-color: hsl(111, 10%, 75%);
   --background-color: hsl(111, 1%, 10%);
@@ -21,7 +29,7 @@
   --background-pop: hsl(111, 18%, 74%);
   --background-pop-subtle: hsl(111, 10%, 54%);
   --link-underline-color: hsl(111, 15%, 95%);
-}
+} */
 
 :root {
   --fluid-min-width: 320;
@@ -33,7 +41,7 @@
   
   --fluid-screen: 100vw;
   --fluid-bp: calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16)));
-  --font-family: "Source Serif Pro", serif;
+  --font-family: "Inter", serif;
 }
 
 @media screen and (min-width: 1500px) {
@@ -146,33 +154,20 @@ body {
   flex-direction: column;
 }
 
-/* Better underline Experiment */
-
 a {
+  color: var(--accented-font-color);
+  font-weight: 700;
   text-decoration: none;
-  color: var(--font-color);
-  position: relative;
-  text-shadow: -1px -1px 0 var(--background-color), 1px -1px 0 var(--background-color), -1px 1px 0 var(--background-color), 1px 1px 0 var(--background-color);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, var(--link-underline-color) 2px, var(--link-underline-color) 3px, rgba(0, 0, 0, 0) 3px);
-  transition: color .165s ease-out, background-image .165s ease-out;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  a {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, var(--link-underline-color) 2px, var(--link-underline-color) 2.5px, rgba(0, 0, 0, 0) 2.5px);
-  }
-}
-a:hover, a:focus {
-  color: var(--background-pop);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, var(--background-pop) 2px, var(--background-pop) 3px, rgba(0, 0, 0, 0) 3px);
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  a:hover, a:focus {
-    color: var(--background-pop);
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, var(--background-pop) 2px, var(--background-pop) 2.5px, rgba(0, 0, 0, 0) 2.5px);
-  }
+  transition: border .064s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
-/* End Better Underline Experiment */
+article a {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+article a:hover {
+  border-bottom: 2px solid rgba(255,255,255,0.6);
+}
 
 h1,
 h2,
@@ -181,6 +176,7 @@ h4 {
   font-weight: 700;
   line-height: 1.2;
   margin: 0.5em 0;
+  color: var(--accented-font-color);
 }
 
 h1 {
@@ -188,12 +184,36 @@ h1 {
 }
 
 h1 a {
-  background-image: none;
-  color: var(--font-color);
+  color: var(--accented-font-color);
+  border-bottom: 0;
+}
+
+h1 a:hover {
+  border-bottom: 0;
 }
 
 h2 {
   font-size: var(--fluid-2);
+}
+
+.growing-ball-of-light {
+  position: absolute;
+  width: 100%;
+  height: 1100px;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  z-index: -1;
+  background: radial-gradient(50% 50% at 50% 50%, hsla(126, 85%, 35%, .7) 0%, rgba(13, 166, 28, 0.15) 30.73%, rgba(4, 56, 10, 0) 100%);  opacity: 0.35;
+  animation-name: growing-ball;
+  animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+  transform-origin: center;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+
+@keyframes growing-ball {
+  from {transform: translate(-50%, -100%)}
+  to {transform: translate(-50%, -65%);}
 }
 
 header {
@@ -215,20 +235,42 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-top: calc(var(--fluid-4)*2);
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: calc(var(--fluid-0) /2);
-  border-bottom: 1px solid var(--font-color);
+  max-width: var(--max-container-width);
 }
 
-.header-line__backlink {
+.header-line--backlink {
   padding: calc(var(--fluid-0) / 2);
   padding-left: 0;
 }
 
 .articles-wrapper .divider {
   display: block;
-  border-bottom: 1px solid var(--font-color);
-  margin-bottom: calc(var(--fluid-5) * 3);
-} 
+  height: 1px;
+  width: 100%;
+  margin-bottom: calc(var(--fluid-5) * 4);
+  background: -webkit-linear-gradient(left,transparent,rgba(255,255,255,0.1) 50%,transparent);
+  background: linear-gradient(left,transparent,rgba(255,255,255,0.1) 50%,transparent);
+  animation-name: growing-divider;
+  animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+  transform-origin: center;
+  animation-fill-mode: forwards;
+  animation-duration: 1.4s;
+  opacity: 0.2
+}
+
+@keyframes growing-divider {
+from {opacity: 0.2}
+to {opacity: 1}
+}
+
+.articles-wrapper {
+  width: 100%;
+  background: transparent url("blurred-decoration.png") no-repeat top center;
+  background-size: 100%;
+}
 
 .back-to-articles__icon g {
   stroke: var(--font-color);
@@ -257,12 +299,50 @@ header a {
 }
 
 .introduction {
-  margin-bottom: calc(var(--fluid-5) * 3);
-  max-width: 900px;
+  text-align: center;
+  margin-bottom: calc(var(--fluid-5) * 4);
+  padding: 0 var(--fluid-1);
 }
 
-.introduction h1 {
+.introduction--name {
+  font-weight: bold;
+  font-size: var(--fluid-1);
+  margin-bottom: var(--fluid-1);
+  display: block;
+  color: hsl(126, 16%, 60%);
+  animation-name: introduction-name-reveal;
+  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  transform-origin: center;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: .320s;
+  opacity: 0;
+}
+
+@keyframes introduction-name-reveal {
+  from {opacity: 0; }
+  to {opacity: 1; }
+}
+
+.introduction--headline {
   font-size: var(--fluid-5);
+  max-width: 18em;
+  margin: 0 auto;
+  background: linear-gradient(120deg, rgba(255, 255, 255, .95) 20%, hsla(126, 5%, 85%, 0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: introduction-reveal;
+  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  transform-origin: center;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  transform: translate(0, -.5rem);
+  opacity: 0.6;
+}
+
+@keyframes introduction-reveal {
+  from {opacity: 0; transform: translate(0, -.5rem);}
+  to {opacity: 1; transform: translate(0, 0);}
 }
 
 .introduction p {
@@ -331,13 +411,13 @@ nav ul li:not(:last-child) {
 }
 
 main {
-  padding-right: var(--fluid-2);
-  padding-left: var(--fluid-2);  
+  /* padding-right: var(--fluid-2); */
+  /* padding-left: var(--fluid-2);   */
   padding-bottom: var(--fluid-5);
   padding-top: var(--fluid-5);
   margin-right: auto;
   margin-left: auto;
-  max-width: var(--max-container-width);
+  /* max-width: var(--max-container-width); */
   flex: 1 0 auto;
   width: 100%;
 }
@@ -347,7 +427,9 @@ main {
   margin-bottom: calc(var(--fluid-5)*5);
   margin-right: auto;
   margin-left: auto;
+  padding: 0 var(--fluid-1);
 }
+
 
 .articles-wrapper article > p, article ol, article ul {
     margin-top: calc(var(--fluid-0)*1.75);
@@ -367,12 +449,13 @@ article ol li, article ul li {
   margin-bottom: 0 !important;
 }
 
-.small-text, .article-published-time {
+.small-text, .article--metadata {
   font-size: calc(var(--fluid-0) * .75);
 }
 
-.article-published-time {
+.article--metadata, .metadata--time, .metadata--permalink {
   color: var(--muted-font-color);
+  font-weight: 400;
 }
 
 article > :first-child {
@@ -482,7 +565,6 @@ footer .content {
   justify-content: space-between;
   align-items: flex-start;
   padding-top: var(--fluid-2);
-  border-top: 1px solid var(--font-color);
   font-size: calc(var(--fluid-0) * .75);
 }
 
@@ -512,3 +594,4 @@ footer .social-links svg path {
 footer .social-links a:hover svg path {
   fill: var(--muted-font-color);
 }
+
