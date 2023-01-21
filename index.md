@@ -6,7 +6,7 @@ layout: home
 ## My name is Geffrey van der Bos. 
 I've been designing and guiding the development of software products for over 10 years. 
 
-On this microblog, I share my thoughts on personal knowledge management, developing software products, and technology.
+On this microblog, I share my thoughts on personal knowledge management, software, and technology.
 
 Nowadays, I'm the software product owner at <a href="https://www.comecer.com/" title="Aseptic Processing and Containment Technologies.">Comecer</a>. A company that provides hardware and software to nuclear medicine facilities.
 
