@@ -4,9 +4,9 @@ layout: post
 title: "Obsidian as a CMS to publish on Github Pages with Jekyll"
 ---
 
-I was on a quest to use [Obsidian.md](https://obsidian.md) as a content management system for my microblogging website.
+I was on a quest to use [Obsidian.md](https://obsidian.md) as a content management system for this microblogging website.
 
-My previous website used [Grav CMS](https://getgrav.org/) to serve [Markdown](https://daringfireball.net/projects/markdown/) files. It is great. But, not great for working on in Obsidian because of their odd "folder" based pages.
+My previous website used [Grav CMS](https://getgrav.org/) to serve [Markdown](https://daringfireball.net/projects/markdown/) files. It is great. But not for working on in Obsidian because of their odd "folder" based pages.
 
 So, I rebuild my site on [Jekyll](https://jekyllrb.com/). Knowing that I can have a list of Markdown files as posts.
 
@@ -14,7 +14,7 @@ Now, I …
 
 1. installed Jekyll on my computer,
 2. opened the `\_POSTS` folder as a Vault in Obsidian.
-3. Use [Templater](https://github.com/SilentVoid13/Templater) to give me a ready to write Markdown file.
+3. Use [Templater](https://github.com/SilentVoid13/Templater) to give me a ready-to-write Markdown file.
 4. Use the [Obsidian Git](https://github.com/denolehov/obsidian-git) plugin to publish the notes to [Github Pages](https://pages.github.com/).
 
 Below the template I use for posts. On creating a new note, it asks for the post title. It then renames the file with a Jekyll ready permalink.

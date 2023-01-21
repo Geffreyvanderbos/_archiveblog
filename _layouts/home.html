@@ -6,9 +6,36 @@ layout: default
     <span class="introduction--name">Geffrey van der Bos</span>
     <h1 class="introduction--headline">{{ page.title }}</h1>
   {%- endif -%}
-  <div class="my-undertakings">
-    {{ content }}
+  <a id="modal--button">
+    <div><span>Who?</span><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><clipPath id="a"><path d="m0 .000001h24v23.999999h-24z"/></clipPath><g clip-path="url(#a)"><path d="m0 0h24v23.999999h-24z" transform="translate(0 .000001)"/><g fill="none" height="24" rx="0" ry="0" stroke-linecap="round" stroke-linejoin="round" width="24"><path d="m5 20v-1c0-3.866 3.134-7 7-7 3.866 0 7 3.134 7 7v1m-7-8c2.209 0 4-1.791 4-4s-1.791-4-4-4-4 1.791-4 4 1.791 4 4 4z" rx="0" ry="0"/><path d="m5 20v-1c0-3.866 3.134-7 7-7 3.866 0 7 3.134 7 7v1m-7-8c2.209 0 4-1.791 4-4s-1.791-4-4-4-4 1.791-4 4 1.791 4 4 4z" rx="0" ry="0" stroke="#fff" stroke-width="1.5"/></g></g></svg>
+    </div></a>
+  <div id="modal--container">
+    <div id="modal--content">
+      <span class="modal--close">&times;</span>
+      <p>{{ content }}</p>
+    </div>
   </div>
+  <script>
+    var modal = document.getElementById("modal--container");
+
+    var btn = document.getElementById("modal--button");
+
+    var span = document.getElementsByClassName("modal--close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 </div>
 <div class="articles-wrapper">
   <div class="divider"></div>

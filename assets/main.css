@@ -161,11 +161,11 @@ a {
   transition: border .064s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
-article a {
+article a, #modal--content a {
   border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
-article a:hover {
+article a:hover, #modal--content a:hover {
   border-bottom: 2px solid rgba(255,255,255,0.6);
 }
 
@@ -280,22 +280,38 @@ header a {
   background-image: none;
 }
 
-.copy-link-button, article .read-more-button, .load-more {
+#modal--button {
+  position: relative;
+  display: inline-block;
+  animation-name: introduction-name-reveal;
+  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  transform-origin: center;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: .520s;
+  opacity: 0;
+}
+
+#modal--button div {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  line-height: 28px;
   font-family: var(--font-family);
-  color: var(--font-color);
-  padding: calc(var(--fluid-0) / 2);
+  font-size: calc(var(--fluid-0) * .85);
+  color: var(--accented-font-color);
+  padding: var(--fluid-0) calc(var(--fluid-0) / 1.25) var(--fluid-0) var(--fluid-0);
   border: 1px solid var(--font-color);
-  background-color: transparent;
-  background-image: none;
+  border-radius: 5em;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: background-color .065s ease-out;
+  font-weight: 400;
 }
 
-.copy-link-button:hover:not(.copy-successful), .load-more {
-  background-color: var(--button-hover);
-}
-
-.copy-successful {
-  background-color: var(--background-pop-subtle);
+#modal--button div svg {
+  margin-left: 4px;
 }
 
 .introduction {
@@ -327,7 +343,7 @@ header a {
 .introduction--headline {
   font-size: var(--fluid-5);
   max-width: 18em;
-  margin: 0 auto;
+  margin: 0 auto var(--fluid-1) auto;
   background: linear-gradient(120deg, rgba(255, 255, 255, .95) 20%, hsla(126, 5%, 85%, 0.9) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -345,48 +361,70 @@ header a {
   to {opacity: 1; transform: translate(0, 0);}
 }
 
-.introduction p {
-  font-size: var(--fluid-3);
+#modal--container {
+  display: none;
+  position: fixed; 
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  backdrop-filter: blur(5px);
+  background-color: hsla(126, 35%, 2%, .9);
+  animation-name: modal-background;
+  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  animation-fill-mode: forwards;
+  animation-duration: .084s;
+  opacity: 0;
 }
 
-.introduction .social-links, .introduction .links {
-  list-style: none;
-  padding: 0;
+@keyframes modal-background {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
-.introduction .social-links {
-  display: flex;
+#modal--content {
+  text-align: left;
+  background: linear-gradient(180deg, hsla(126, 85%, 2%, .95) 0%, hsla(120, 13%, 5%, .9) 100%);
+  margin: 15vh auto;
+  padding: var(--fluid-5);
+  box-shadow: 
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.12),
+    0px 3.8px 5.5px rgba(0, 0, 0, 0.2),
+    0px 9.2px 13.3px rgba(0, 0, 0, 0.144),
+    0px 17.3px 25px rgba(0, 0, 0, 0.119),
+    0px 30.8px 44.7px rgba(0, 0, 0, 0.1),
+    0px 57.7px 83.6px rgba(0, 0, 0, 0.081),
+    0px 138px 200px rgba(0, 0, 0, 0.056);
+  max-width: 720px;
+  border-radius: 12px;
+  animation-name: modal-content;
+  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  animation-fill-mode: forwards;
+  animation-duration: .164s;
+  transform: translateY(.2rem);
 }
 
-.introduction .my-undertakings {
-  margin-top: calc(var(--fluid-5) * 2);
+@keyframes modal-content {
+  from {transform: translateY(.2rem);}
+  to {transform: translateY(0);}
 }
 
-.introduction .links li {
-  max-width: 600px;
-  margin-bottom: calc(var(--fluid-2) * 1.25);
+.modal--close {
+  color: var(--muted-font-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  bottom: var(--fluid-2);
 }
 
-.introduction .links li:before{
-  content: "\2794";
-  font-weight: 700;
-  margin-right: 12px;
-}
-
-.introduction .social-links a {
-  margin-right: calc(var(--fluid-1) / 2);
-  display: inline-block;
-  padding: calc(var(--fluid-1) / 2.5) calc(var(--fluid-1) / 2);
-  background: var(--background-color);
-  border: 1px solid var(--muted-font-color);
-  box-shadow: 0 4px 24px -8px rgba(0,0,0,0.20);
-  border-radius: 4px;
-}
-
-.introduction img {
-  margin-bottom: calc(var(--fluid-2) * 2);
-  border-radius:50%;
-  box-shadow: 0 4px 8px -4px rgba(0,0,0,0.24), 0 8px 18px -8px rgba(0,0,0,0.16);
+.modal--close:hover,
+.modal--close:focus {
+  text-decoration: none;
+  color: var(--font-color);
+  cursor: pointer;
 }
 
 nav {
