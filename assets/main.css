@@ -281,6 +281,7 @@ header a {
 }
 
 #modal--button {
+  cursor: pointer;
   position: relative;
   display: inline-block;
   animation-name: introduction-name-reveal;
@@ -306,8 +307,12 @@ header a {
   backdrop-filter: blur(12px);
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: background-color .065s ease-out;
   font-weight: 400;
+  transition: background-color .165s ease-out;
+}
+
+#modal--button:hover div {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 #modal--button div svg {
