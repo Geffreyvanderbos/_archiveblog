@@ -10,12 +10,12 @@ It has a really steep learning curve. But, I am all in for experiments.
 
 This is my attempt to simplify Vim for Obsidian. I've broken up the commands in phases and ignored (existing) commands I am unlikely to use for note taking/outlining.
 
-- Phase 1: Moving the cursor
+- **Phase 1: Moving the cursor**
 	- `h` / `l` - left and right
 		- `e` / `ge` - jump to next/previous word
 		- `0` / `$` - jump to start/end of line
 	- `j` and `k` - up and down
-- Phase 2: Editing text
+- **Phase 2: Editing text**
 	- `a` - start insert mode (append)
 		- `I` / `A` - start insert mode start/end of line
 		- `i` - start insert mode (inside)
@@ -23,22 +23,22 @@ This is my attempt to simplify Vim for Obsidian. I've broken up the commands in 
 	- `o` / `O` - Add blank line below/above
 	- `d` - Delete
 		- `dd` - Delete line
-- Phase 3: Copying and Pasting
+- **Phase 3: Copying and Pasting**
 	- `c` - Delete, copy, and start insert mode
 		- `cc` - Delete, copy line, and start insert mode
 	- `y` - copy
 		- `yy` - copy line
 	- `p` - paste
 	- `u` - undo
-- Phase 4: Selecting text
+- **Phase 4: Selecting text**
 	- `v` - start visual mode
-- Phase 5: Advanced
+- **Phase 5: Advanced**
 	- `gg` - go to top of page
 	- `G` - go to bottom of page
 	- `J` - Join line below to the current one
 	- `r [character]` - replace (for typos)
 	- `zz` - center current line in screen
-- Phase 6: Repeaters and modifiers
+- **Phase 6: Repeaters and modifiers**
 	- `{number}j` - Go down `{number}` lines
 	- `{number}k` - Go up `{number}` lines
 	- `{number}G` - Go to line `{number}

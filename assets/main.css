@@ -473,19 +473,33 @@ main {
   padding: 0 var(--fluid-1);
 }
 
-
-.articles-wrapper article > p, article ol, article ul {
-    margin-top: calc(var(--fluid-0)*1.75);
-    margin-bottom: calc(var(--fluid-0)*1.75);
+article ol, article ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-article ol, article ul {
-  border-left: 1px solid var(--muted-font-color);
+article ol ol, article ul ul {
+  padding-left: 2rem;
+  /* color: var(--muted-font-color); */
+}
+
+article ol ol, article ul ul {
+  border-left: 1px solid hsl(0, 0%, 10%);
+}
+
+article ol li::before, article ul li::before {
+  content: "";
+  content: "\2022";
+  display: inline-block;
+  width: 1.55rem;
+  position: relative;
+  left: -.3rem;
+  color: var(--muted-font-color);
 }
 
 article ol li, article ul li {
-  margin-top: calc(var(--fluid-0)*0.75);
-  margin-bottom: calc(var(--fluid-0)*0.75);
+  margin-top: .15rem;
+  margin-bottom: .15rem;
 }
 
 .article-feed--header {
@@ -512,6 +526,13 @@ article > :last-child {
 article > hr,
 article> hr:last-child {
   margin: var(--space-2) 0;
+}
+
+article code.highlighter-rouge {
+  background-color: hsl(0, 0%, 10%);
+  border-radius: 0.3em;
+  padding: 2px 6px;
+  white-space: nowrap;
 }
 
 article table {
