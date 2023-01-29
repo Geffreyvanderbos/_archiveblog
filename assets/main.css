@@ -473,7 +473,7 @@ main {
   padding: 0 var(--fluid-1);
 }
 
-article ol, article ul {
+article ul {
   list-style-type: none;
   padding: 0;
 }
@@ -488,14 +488,15 @@ article ol ol, article ul ul {
 }
 
 article ol li::before, article ul li::before {
-  content: "";
-  content: "\2022";
   display: inline-block;
-  width: 1.55rem;
+  /* width: 1.55rem; */
   position: relative;
   left: -.3rem;
   color: var(--muted-font-color);
 }
+
+article ul li::before
+{  content: "\2022"; }
 
 article ol li, article ul li {
   margin-top: .15rem;
@@ -659,3 +660,17 @@ footer .social-links a:hover svg path {
   fill: var(--muted-font-color);
 }
 
+.footnote {
+  text-decoration: none;
+  margin-left: 2px;
+  font-weight: 300;
+  color: var(--muted-font-color);
+}
+
+.footnotes {
+  border-top: 1px solid var(--muted-font-color);
+}
+
+.footnotes ol li {
+  font-size: 75% !important;
+}
