@@ -7,7 +7,7 @@ visible: 1
 
 I've designed a minimal, at-home strength training program for myself. I don't have lofty goals or high expectations. It is small enough to do in under 30 minutes for 2-3 times a week.[^1]
 
-I am a novice at strength training. Currently weighing in at 80 kilos, with ≈24% body fat. (Call it a winter reservoir.)
+I am a novice at strength training. Currently weighing in at 80 kilos, with ≈24% body fat. (Call it a winter reserve.)
 
 My goal is to gain at least 5 kilo of muscle and 20% bodyfat by the end of this year. For reference, you can achieve 3 kilo muscle in 3 months with serious training and diet.
 
