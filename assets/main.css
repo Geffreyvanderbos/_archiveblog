@@ -1,6 +1,6 @@
 :root { 
   --max-container-width: 1320px;
-  --max-article-width: 680px;
+  --max-article-width: 800px;
 }
 
 :root { 
@@ -11,14 +11,14 @@
   --background-pop: hsl(111, 63%, 24%);
   --background-pop-subtle: hsl(111, 10%, 74%);
   --link-underline-color: hsl(111, 3%, 15%); */
-  --font-color: hsl(150, 4%, 80%);
-  --accented-font-color: hsl(150, 4%, 94%);
-  --muted-font-color: hsl(150, 4%, 50%);
-  --background-color: #0A0A0A;
+  --font-color: hsl(0, 0%, 14%);
+  --accented-font-color: hsl(0, 0%, 9%);
+  --muted-font-color: hsl(0, 0%, 32%);
+  --background-color: #f3f3f3;
   --button-hover: hsl(111, 1%, 25%);
-  --background-pop: hsl(111, 18%, 74%);
-  --background-pop-subtle: hsl(111, 10%, 54%);
-  --link-underline-color: hsl(111, 15%, 95%);
+  --background-pop: hsl(0, 0%, 73%);
+  --background-pop-subtle: hsl(0, 0%, 11%);
+  --link-underline-color: hsl(0, 0%, 42%);
 }
 
 /* .dark-mode body { 
@@ -34,14 +34,14 @@
 :root {
   --fluid-min-width: 320;
   --fluid-max-width: 1500;
-  --fluid-min-size: 16;
-  --fluid-max-size: 20;
+  --fluid-min-size: 18;
+  --fluid-max-size: 22;
   --fluid-min-ratio: 1.05;
   --fluid-max-ratio: 1.15;
   
   --fluid-screen: 100vw;
   --fluid-bp: calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16)));
-  --font-family: "Inter", serif;
+  --font-family: "Lora", serif;
 }
 
 @media screen and (min-width: 1500px) {
@@ -91,52 +91,6 @@
   box-sizing: border-box;
 }
 
-.toggle-theme {
-  display: block;
-  height: 24px;
-  width: 24px;
-  margin-left: var(--fluid-0);
-  position: relative;
-  top: -4px;
-}
-
-.toggle-theme:active {
-  opacity: 0.7;
-}
-
-.toggle-theme svg path {
-  fill: var(--font-color);
-}
-
-.dark-mode .toggle-theme svg path {
-  transform: scale(1, -1) translate(0, -100);
-}
-
-.toggle-theme::before {
-  content: '';
-  display: inline-block;
-  width: 480px;
-  height: 480px;
-  left: -228px;
-  top: -228px;
-  position: absolute;
-  border-radius: 100%;
-  background-color: white;
-  mix-blend-mode: difference;
-  transform-origin: center;
-  z-index: 1000;
-  opacity: 0;
-  transform: scale(.05, .05);  
-  transition: transform .5s cubic-bezier(0.85, 0, 0.15, 1), opacity .4s cubic-bezier(0.85, 0, 0.15, 1);
-  pointer-events: none;
-}
-
-@media (hover: hover) {
-  .toggle-theme:hover::before {
-    opacity: 1;
-    transform: scale(.75, .75);
-  }
-}
 
 html, body {
   height: 100%;
@@ -148,10 +102,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--font-color);
-  font: 400 var(--fluid-0) / 1.6 var(--font-family);
+  font: 400 var(--fluid-0) / calc(1.5em + .2vw) var(--font-family);
   margin: 0;
   display: flex;
   flex-direction: column;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  text-decoration: underline;
+}
+
+.page {
+  background-color: white;
+  margin: var(--fluid-1);
+  display: block;
+  border-radius: 2rem;
 }
 
 a {
@@ -173,9 +141,9 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
-  margin: 0.5em 0;
+  margin: 0.75em 0;
   color: var(--accented-font-color);
 }
 
@@ -196,14 +164,14 @@ h2 {
   font-size: var(--fluid-2);
 }
 
-.growing-ball-of-light {
+/* .growing-ball-of-light {
   position: absolute;
   width: 100%;
   height: 1100px;
   left: 50%;
   transform: translate(-50%, -65%);
   z-index: -1;
-  background: radial-gradient(50% 50% at 50% 50%, hsla(126, 85%, 35%, .7) 0%, rgba(13, 166, 28, 0.15) 30.73%, rgba(4, 56, 10, 0) 100%);  opacity: 0.35;
+  background: radial-gradient(50% 50% at 50% 50%, hsla(126, 85%, 35%, 1) 0%, rgba(13, 166, 28, 0.50) 30.73%, rgba(4, 56, 10, 0) 100%);  opacity: 0.35;
   animation-name: growing-ball;
   animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
   transform-origin: center;
@@ -214,7 +182,7 @@ h2 {
 @keyframes growing-ball {
   from {transform: translate(-50%, -100%)}
   to {transform: translate(-50%, -65%);}
-}
+} */
 
 header {
   width: 100%;
@@ -251,7 +219,7 @@ header {
   height: 1px;
   width: 100%;
   margin-bottom: calc(var(--fluid-5) * 4);
-  background: -webkit-linear-gradient(left,transparent,rgba(255,255,255,0.1) 50%,transparent);
+  /* background: -webkit-linear-gradient(left,transparent,rgba(255,255,255,0.1) 50%,transparent);
   background: linear-gradient(left,transparent,rgba(255,255,255,0.1) 50%,transparent);
   animation-name: growing-divider;
   animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
@@ -264,12 +232,13 @@ header {
 @keyframes growing-divider {
 from {opacity: 0.2}
 to {opacity: 1}
+} */
 }
 
 .articles-wrapper {
   width: 100%;
-  background: transparent url("blurred-decoration.png") no-repeat top center;
-  background-size: 100%;
+  /* background: transparent url("blurred-decoration.png") no-repeat top center;
+  background-size: 100%; */
 }
 
 .back-to-articles__icon g {
@@ -278,45 +247,6 @@ to {opacity: 1}
 
 header a {
   background-image: none;
-}
-
-#modal--button {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  animation-name: introduction-name-reveal;
-  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
-  transform-origin: center;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-  animation-delay: .520s;
-  opacity: 0;
-}
-
-#modal--button div {
-  display: flex;
-  align-items: center;
-  height: 28px;
-  line-height: 28px;
-  font-family: var(--font-family);
-  font-size: calc(var(--fluid-0) * .85);
-  color: var(--accented-font-color);
-  padding: var(--fluid-0) calc(var(--fluid-0) / 1.25) var(--fluid-0) var(--fluid-0);
-  border: 1px solid var(--font-color);
-  border-radius: 5em;
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  font-weight: 400;
-  transition: background-color .165s ease-out;
-}
-
-#modal--button:hover div {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-#modal--button div svg {
-  margin-left: 4px;
 }
 
 .introduction {
@@ -349,7 +279,7 @@ header a {
   font-size: var(--fluid-5);
   max-width: 18em;
   margin: 0 auto var(--fluid-1) auto;
-  background: linear-gradient(120deg, rgba(255, 255, 255, .95) 20%, hsla(126, 5%, 85%, 0.9) 100%);
+  background: linear-gradient(120deg, rgba(0, 0, 0, .95) 20%, hsla(0, 0%, 15%, 0.9) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation-name: introduction-reveal;
