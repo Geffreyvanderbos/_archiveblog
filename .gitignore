@@ -1,8 +1,8 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
 .DS_Store
-.obsidian
-obsidian_templates
+public
+resources
+.idea
+content/.obsidian
+assets/indices/linkIndex.json
+assets/indices/contentIndex.json
+linkmap

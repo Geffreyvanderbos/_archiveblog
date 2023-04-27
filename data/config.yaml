@@ -1,0 +1,28 @@
+name: Geffrey van der Bos
+enableToc: false
+openToc: false
+enableLinkPreview: true
+enableLatex: false
+enableCodeBlockTitle: true
+enableCodeBlockCopy: true
+enableCallouts: true
+enableSPA: false
+enableFooter: true
+enableContextualBacklinks: false
+enableRecentNotes: false
+enableGitHubEdit: false
+enableMermaid: true
+GitHubLink: https://github.com/jackyzha0/quartz/tree/hugo/content
+search:
+  enableSemanticSearch: false
+  operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
+  operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
+description:
+  Here, you'll find my notes on Product Management, PKM, and more. I'm Geffrey, a product manager with a design background and a passion for music. I believe in the power of collaboration and team dynamics to bring great ideas to life.
+page_title:
+  "Geffrey's Blog"
+links:
+  - link_name: Mastodon
+    link: https://pkm.social/@geffrey
+  - link_name: LinkedIn
+    link: https://www.linkedin.com/in/gvanderbos/
